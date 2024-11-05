@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Navbar from "@/components/navbar";
-import { buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button";
 import Link from 'next/link';
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="bg-customWhite min-h-screen pt-16"> 
       <Navbar />
 
-      {/* Seção da 1 imagem */}
+      {/* Seção da 1ª imagem */}
       <section className="flex flex-col md:flex-row items-center justify-center p-8 space-y-4 md:space-y-0 md:space-x-12 mt-32">
         <div className="text-center md:text-left max-w-lg">
           <h1 className="text-5xl font-bold text-gray-900 mb-2">
@@ -17,7 +17,9 @@ export default function Home() {
           <p className="text-lg text-gray-700">
             O sistema que facilita a troca de salas do Instituto Mauá de Tecnologia. Por alunos para alunos!
           </p>
-          <Link className={`${buttonVariants({ variant: "outline" })} bg-customOrange text-white hover:bg-customBlue mt-9 rounded-xl`} href="/sobre_nos" >Saiba mais</Link>
+          <Link className={`${buttonVariants({ variant: "outline" })} bg-customOrange text-white hover:bg-customBlue mt-9 rounded-xl`} href="/sobre_nos">
+            Saiba mais
+          </Link>
         </div>
 
         <div className="mt-4 md:mt-0">
@@ -31,7 +33,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Seção da 2 imagem */}
+      {/* Seção da 2ª imagem */}
       <section className="flex flex-col md:flex-row items-center justify-center p-20 space-y-4 md:space-y-0 md:space-x-12 mt-52">
         <div className="mt-4 md:mt-0 mb-4">
           <Image
@@ -39,7 +41,7 @@ export default function Home() {
             alt="Alunos Mauá"
             width={500}
             height={500}
-            className="w-full h-full object-cover rounded-lg "
+            className="w-full h-full object-cover rounded-lg"
           />
         </div>
 
